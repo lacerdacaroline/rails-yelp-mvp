@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+<h1 class="h-100 d-flex align-items-center justify-content-center">Restaurants</h1>
+<div class="h-100 d-flex align-items-center justify-content-center">
+
+
+  <div id="restaurants">
+    <ul class="list-group">
+      <% @restaurants.each do |restaurant| %>
+        <li class="list-group-item"><%= render restaurant %></li>
+        <div class="h-100 d-flex align-items-center justify-content-center">
+
+          <p class="btn btn-outline-primary" >
+            <%= link_to "Show this restaurant", restaurant, :class => "btn" %>
+          </p>
+
+          <p class="btn btn-outline-primary">
+          <%= link_to "New restaurant", new_restaurant_path, :class => "btn" %>
+          </p>
+
+        </div>
+    </ul>
+    <% end %>
+  </div>
+
+
+</div>
